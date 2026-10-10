@@ -1,0 +1,104 @@
+
+/* RIDDLES — midnight blue, luminous runes and puzzle cards */
+@import url("./garden.css");
+
+:root {
+  --gold: #a9e9ff;
+  --gold-bright: #e4faff;
+  --pink: #b7a5ff;
+  --pink-light: #ddd5ff;
+  --purple: #7acaff;
+  --panel: rgba(18, 29, 59, .82);
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 50% 0%, #315cb33b, transparent 42%),
+    radial-gradient(ellipse at 100% 60%, #6039a52b, transparent 35%),
+    linear-gradient(155deg, #080c18, #101a35 55%, #0a0c1c);
+}
+
+body::before {
+  background:
+    radial-gradient(circle, #b7dfff38 0 1px, transparent 2px),
+    radial-gradient(circle, #a9e9ff23 0 2px, transparent 3px);
+  background-size: 85px 95px, 160px 180px;
+  animation: riddlesStars 50s linear infinite;
+}
+
+.big-icon {
+  border-color: #a9e9ff66;
+  background:
+    radial-gradient(circle at 30% 20%, #ffffff27, transparent 55%),
+    linear-gradient(145deg, #294c83, #11142c);
+  box-shadow:
+    0 0 0 9px #a9e9ff08,
+    0 0 45px #62baff30;
+}
+
+.workspace,
+.collection {
+  border-color: #a9e9ff30;
+  background:
+    linear-gradient(145deg, #8ddcff0a, transparent 55%),
+    rgba(15, 22, 46, .86);
+}
+
+.workspace::before,
+.collection::before {
+  background: linear-gradient(90deg, transparent, #a9e9ff, #b7a5ff, transparent);
+}
+
+.item-card {
+  border-color: #a9e9ff24;
+  background:
+    radial-gradient(ellipse at top left, #8ddcff0c, transparent 70%),
+    #0d1226c9;
+}
+
+.item-card:hover {
+  border-color: #a9e9ff77;
+  box-shadow: 0 12px 32px #0005, 0 0 20px #a9e9ff10;
+}
+
+.item-card h3 {
+  color: #c7edff;
+}
+
+.option-button {
+  justify-content: flex-start;
+  width: 100%;
+  text-align: left;
+  border-radius: 14px;
+  background: linear-gradient(110deg, #ffffff08, #8ddcff05);
+}
+
+.option-button:hover {
+  border-color: #a9e9ff88;
+  background: #a9e9ff0d;
+  box-shadow: 0 0 22px #62baff12;
+}
+
+.option-button:disabled {
+  opacity: .72;
+}
+
+.action-button {
+  color: #10152b;
+  background: linear-gradient(110deg, #b4eeff, #d7c6ff 55%, #b4eeff);
+}
+
+#feedback {
+  min-height: 2em;
+  color: var(--gold-bright);
+  text-align: center;
+}
+
+#question {
+  text-shadow: 0 0 24px #b7a5ff20;
+}
+
+@keyframes riddlesStars {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-40px, -70px, 0); }
+}
