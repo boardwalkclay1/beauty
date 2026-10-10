@@ -1,0 +1,104 @@
+
+/* QUEEN PALACE — regal velvet, royal gold and gemstone light */
+@import url("./garden.css");
+
+:root {
+  --gold: #f6d27f;
+  --gold-bright: #fff0bd;
+  --pink: #f2b7d4;
+  --pink-light: #ffe4f0;
+  --purple: #d8b0ff;
+  --panel: rgba(43, 27, 35, .83);
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 50% 0%, #b78b3738, transparent 38%),
+    radial-gradient(ellipse at 0% 60%, #80344c30, transparent 36%),
+    linear-gradient(150deg, #110a0c, #29141c 50%, #100a12);
+}
+
+body::before {
+  background:
+    radial-gradient(circle, #ffe3a333 0 1px, transparent 2px),
+    radial-gradient(circle, #f3c86a24 0 2px, transparent 3px);
+  background-size: 95px 105px, 175px 165px;
+  animation: palaceSparkles 32s linear infinite;
+}
+
+.big-icon {
+  border-color: #f6d27f99;
+  background:
+    radial-gradient(circle at 30% 20%, #fff6d833, transparent 55%),
+    linear-gradient(145deg, #755326, #291620);
+  box-shadow:
+    0 0 0 9px #f6d27f0b,
+    0 0 45px #f6d27f30,
+    inset 0 0 22px #f6d27f0d;
+}
+
+.big-icon::after {
+  border-color: #f6d27f77;
+}
+
+.workspace,
+.collection {
+  border-color: #f6d27f36;
+  background:
+    linear-gradient(145deg, #f6d27f0c, transparent 60%),
+    rgba(36, 21, 29, .87);
+}
+
+.workspace::before,
+.collection::before {
+  background: linear-gradient(90deg, transparent, #f6d27f, #e5a3b8, transparent);
+}
+
+.item-card {
+  border-color: #f6d27f28;
+  background:
+    linear-gradient(135deg, #f6d27f08, transparent 65%),
+    #1c1018c9;
+}
+
+.item-card:hover {
+  border-color: #f6d27f77;
+  box-shadow: 0 12px 34px #0005, 0 0 24px #f6d27f0c;
+}
+
+.item-card h3 {
+  color: #ffdf96;
+}
+
+.action-button {
+  color: #29180d;
+  background: linear-gradient(110deg, #ffe7a3, #eab5d1 55%, #ffe7a3);
+}
+
+#royalPreview {
+  position: relative;
+  isolation: isolate;
+  border-radius: 22px;
+  background:
+    radial-gradient(ellipse at center, #f6d27f12, transparent 65%),
+    linear-gradient(145deg, #21141b, #100b12);
+}
+
+#royalPreview::after {
+  position: absolute;
+  z-index: -1;
+  inset: 9px;
+  border: 1px solid #f6d27f1c;
+  border-radius: 16px;
+  content: "";
+  pointer-events: none;
+}
+
+#previewName {
+  text-shadow: 0 0 24px #f6d27f24;
+}
+
+@keyframes palaceSparkles {
+  from { transform: translateY(0); }
+  to { transform: translateY(-60px); }
+}
