@@ -1,66 +1,140 @@
-body{
+*{
 margin:0;
-font-family:Arial,sans-serif;
-background:#050505;
-color:white;
-text-align:center;
-overflow-x:hidden;
+padding:0;
+box-sizing:border-box;
 }
 
-h1{
-color:gold;
-font-size:4rem;
-text-shadow:
-0 0 12px gold,
-0 0 25px gold;
+html{
+scroll-behavior:smooth;
 }
 
-p{
-color:silver;
-}
+body{
 
-.menu{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-padding:20px;
-}
+font-family:'Poppins',sans-serif;
 
-button{
-background:linear-gradient(
-45deg,
-gold,
-pink,
-royalblue
+background:
+linear-gradient(
+135deg,
+#020202,
+#081b3d,
+#20091f
 );
 
-border:none;
-padding:15px 25px;
-border-radius:50px;
-font-size:1rem;
-cursor:pointer;
-color:black;
-font-weight:bold;
+color:#fff;
+
+overflow-x:hidden;
+
+min-height:100vh;
+
+}
+
+.particles{
+
+position:fixed;
+inset:0;
+
+background:
+radial-gradient(
+rgba(255,255,255,.5) 1px,
+transparent 1px
+);
+
+background-size:35px 35px;
+
+opacity:.15;
+
+animation:stars 50s linear infinite;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+@keyframes stars{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(500px);
+}
+
+}
+
+.navbar{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:20px 40px;
+
+position:sticky;
+top:0;
+
+backdrop-filter:blur(20px);
+
+background:rgba(0,0,0,.4);
+
+z-index:1000;
+
+}
+
+.logo{
+
+font-size:1.4rem;
+font-weight:700;
+color:gold;
+
+}
+
+.nav-links{
+
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+
+}
+
+.nav-links a{
+
+text-decoration:none;
+
+color:white;
+
+font-size:.9rem;
 
 transition:.3s;
+
 }
 
-button:hover{
-transform:scale(1.1);
-box-shadow:
-0 0 20px gold;
+.nav-links a:hover{
+
+color:gold;
+
 }
 
-#content{
-padding:40px;
-max-width:900px;
-margin:auto;
+.hero{
+
+height:100vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+padding:30px;
+
 }
 
-.card{
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(12px);
-padding:25px;
-border-radius:20px;
-}
+.hero h1{
+
+font-family:'Cinzel',serif;
+
+font-size:clamp(4rem,10vw,9rem);
+
+background:
