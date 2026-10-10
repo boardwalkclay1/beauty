@@ -1,0 +1,96 @@
+
+/* LETTERS — romantic rose ink and illuminated paper */
+@import url("./garden.css");
+
+:root {
+  --gold: #f5d5ae;
+  --gold-bright: #ffecd4;
+  --pink: #ff9fc9;
+  --pink-light: #ffd9e9;
+  --purple: #d6b1ff;
+  --panel: rgba(52, 20, 42, .80);
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 12% 20%, #ad315e38, transparent 35%),
+    radial-gradient(ellipse at 90% 65%, #8d3e7835, transparent 35%),
+    linear-gradient(150deg, #130811, #2a1023 52%, #130a18);
+}
+
+body::before {
+  background:
+    radial-gradient(ellipse, #ff9fc927 0 2px, transparent 3px),
+    radial-gradient(ellipse, #f5d5ae1e 0 1px, transparent 2px);
+  background-size: 115px 100px, 170px 145px;
+  animation: lettersPetals 30s linear infinite;
+}
+
+.big-icon {
+  border-color: #ffb8d577;
+  background:
+    radial-gradient(circle at 30% 20%, #ffffff20, transparent 55%),
+    linear-gradient(145deg, #813759, #2c122a);
+  box-shadow:
+    0 0 0 9px #ff9fc90b,
+    0 0 42px #ff8dbb35;
+}
+
+.workspace,
+.collection {
+  border-color: #ffb8d52c;
+  background:
+    linear-gradient(135deg, #ffb8d509, transparent 55%),
+    rgba(43, 19, 38, .85);
+}
+
+.workspace::before,
+.collection::before {
+  background: linear-gradient(90deg, transparent, #ffb8d5, #f5d5ae, transparent);
+}
+
+.item-card {
+  border-color: #ffb8d524;
+  background:
+    linear-gradient(135deg, #ffb8d50a, transparent 70%),
+    #1b101abf;
+}
+
+.item-card:hover {
+  border-color: #ffb8d577;
+  box-shadow: 0 15px 35px #0004, 0 0 20px #ff9fc910;
+}
+
+.item-card h3 {
+  color: #ffc9df;
+}
+
+.action-button {
+  color: #321326;
+  background: linear-gradient(110deg, #ffd5e6, #f6d9a1 55%, #ffd5e6);
+}
+
+textarea {
+  min-height: 180px;
+  line-height: 1.85;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 30px,
+    #ffb8d50a 31px,
+    transparent 32px
+  );
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #ffb8d5aa;
+  box-shadow: 0 0 0 4px #ff9fc914, 0 0 22px #ff9fc90b;
+}
+
+@keyframes lettersPetals {
+  0% { transform: translateY(-10px) rotate(0deg); }
+  50% { transform: translateY(25px) rotate(3deg); }
+  100% { transform: translateY(-10px) rotate(0deg); }
+}
