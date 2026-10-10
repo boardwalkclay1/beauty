@@ -1,0 +1,681 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Code Academy | Learn to Build the Web</title>
+
+  <link rel="stylesheet" href="css/code-academy.css">
+  <script src="js/code-academy.js" defer></script>
+  <script src="js/code-academy-quiz.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html" aria-label="Beauty home">
+      <span class="brand-mark">&lt;/&gt;</span>
+      <span>Code <strong>Academy</strong></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-expanded="false" aria-controls="mainNav">
+      ☰ Menu
+    </button>
+
+    <nav class="nav-links" id="mainNav" aria-label="Main navigation">
+      <a href="#start">Start Here</a>
+      <a href="#htmlLesson">HTML</a>
+      <a href="#cssLesson">CSS</a>
+      <a href="#jsLesson">JavaScript</a>
+      <a href="#practice">Practice</a>
+      <a href="#finalQuiz" class="nav-quiz">Final Quiz</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero page-section" id="start">
+      <div class="hero-content">
+        <span class="pill"><span class="status-dot"></span> BEGINNER-FRIENDLY COURSE</span>
+        <h1>Learn how to build a <span>website.</span></h1>
+        <p class="hero-description">
+          Discover how HTML, CSS, and JavaScript work together.
+          Read simple lessons, try interactive examples, and test what you learn.
+          No experience needed.
+        </p>
+        <div class="hero-actions">
+          <a href="#htmlLesson" class="button button-primary">Start learning <span>→</span></a>
+          <a href="#practice" class="button button-secondary">Try the playground</a>
+        </div>
+        <div class="hero-points">
+          <span>✓ Short lessons</span>
+          <span>✓ Hands-on examples</span>
+          <span>✓ Practice quizzes</span>
+        </div>
+      </div>
+
+      <div class="hero-code" aria-label="Example of HTML, CSS, and JavaScript">
+        <div class="window-bar">
+          <div class="window-dots"><i></i><i></i><i></i></div>
+          <span>your-first-website</span>
+        </div>
+        <div class="code-lines">
+          <p><span class="line-number">1</span> <span class="code-purple">&lt;h1&gt;</span>Hello, world!<span class="code-purple">&lt;/h1&gt;</span></p>
+          <p><span class="line-number">2</span> <span class="code-blue">h1</span> { <span class="code-green">color</span>: <span class="code-orange">purple</span>; }</p>
+          <p><span class="line-number">3</span> <span class="code-pink">button</span>.<span class="code-yellow">onclick</span> = greet;</p>
+        </div>
+        <div class="hero-code-footer"><span class="live-dot"></span> Three technologies. One website.</div>
+      </div>
+    </section>
+
+    <section class="page-section learning-overview" aria-labelledby="overviewTitle">
+      <div class="section-heading">
+        <span class="eyebrow">THE BIG PICTURE</span>
+        <h2 id="overviewTitle">Meet your three building blocks</h2>
+        <p>Each language has a job. Together, they turn code into an interactive website.</p>
+      </div>
+
+      <div class="technology-grid">
+        <article class="technology-card html-theme">
+          <div class="technology-icon">&lt;/&gt;</div>
+          <span class="technology-label">01 · STRUCTURE</span>
+          <h3>HTML</h3>
+          <p>Creates the content: headings, paragraphs, images, links, and buttons.</p>
+          <div class="analogy"><strong>Think of it as:</strong> the frame of a house.</div>
+          <a href="#htmlLesson" class="text-link">Learn HTML →</a>
+        </article>
+
+        <article class="technology-card css-theme">
+          <div class="technology-icon">✳</div>
+          <span class="technology-label">02 · DESIGN</span>
+          <h3>CSS</h3>
+          <p>Controls the appearance: colors, fonts, spacing, layout, and animations.</p>
+          <div class="analogy"><strong>Think of it as:</strong> the paint and decoration.</div>
+          <a href="#cssLesson" class="text-link">Learn CSS →</a>
+        </article>
+
+        <article class="technology-card js-theme">
+          <div class="technology-icon">JS</div>
+          <span class="technology-label">03 · BEHAVIOR</span>
+          <h3>JavaScript</h3>
+          <p>Adds behavior: clicks, calculations, menus, games, and interactive quizzes.</p>
+          <div class="analogy"><strong>Think of it as:</strong> the switches and controls.</div>
+          <a href="#jsLesson" class="text-link">Learn JavaScript →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-section course-progress">
+      <div class="progress-copy">
+        <div>
+          <span class="eyebrow">YOUR PROGRESS</span>
+          <h2>Keep going, one lesson at a time.</h2>
+        </div>
+        <span id="courseProgressText">0% complete</span>
+      </div>
+      <div class="progress-track" role="progressbar"
+        aria-label="Course progress" aria-valuemin="0" aria-valuemax="100"
+        aria-valuenow="0" id="courseProgress">
+        <div id="courseProgressBar"></div>
+      </div>
+      <p id="courseProgressHint">Open the lessons and answer the practice questions to track your progress.</p>
+    </section>
+
+    <section class="page-section lesson-section" id="htmlLesson">
+      <div class="lesson-title-row">
+        <span class="lesson-number html-number">01</span>
+        <div>
+          <span class="eyebrow">LESSON ONE</span>
+          <h2>HTML: Build the page</h2>
+          <p>Learn how webpages organize their content.</p>
+        </div>
+      </div>
+
+      <div class="lesson-layout">
+        <div class="lesson-main">
+          <h3>What is HTML?</h3>
+          <p>
+            HTML means <strong>HyperText Markup Language</strong>. It tells a browser
+            what content exists on a page and how that content is organized.
+          </p>
+          <p>
+            For example, a heading tells the browser, “This is a heading.”
+            A paragraph tells it, “This is a block of text.”
+          </p>
+
+          <div class="code-example">
+            <div class="code-example-header">
+              <span>Example: HTML</span>
+              <button class="copy-button" data-copy="htmlCode">Copy code</button>
+            </div>
+            <pre><code id="htmlCode">&lt;h1&gt;Hello, Lana!&lt;/h1&gt;
+&lt;p&gt;Welcome to my first website.&lt;/p&gt;
+&lt;button&gt;Click me&lt;/button&gt;</code></pre>
+          </div>
+
+          <div class="lesson-callout">
+            <span class="callout-icon">💡</span>
+            <p><strong>Remember:</strong> HTML creates the elements. It does not automatically decide all their colors or give every button a custom action.</p>
+          </div>
+
+          <h3>Explore the HTML topics</h3>
+          <div class="accordion">
+            <details class="lesson-detail" data-progress>
+              <summary>1. Tags and elements</summary>
+              <div class="detail-content">
+                <p>Tags are the markup inside angle brackets. Many elements use an opening tag and a closing tag.</p>
+                <pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;h2&gt;This is a smaller heading.&lt;/h2&gt;</code></pre>
+                <p>The closing tag has a slash. Some elements, like <code>&lt;img&gt;</code>, do not need a closing tag.</p>
+              </div>
+            </details>
+
+            <details class="lesson-detail" data-progress>
+              <summary>2. Attributes, links, and images</summary>
+              <div class="detail-content">
+                <p>Attributes give elements extra information. A link uses <code>href</code> for its destination. An image uses <code>src</code> for its image file.</p>
+                <pre><code>&lt;a href="about.html"&gt;About me&lt;/a&gt;
+&lt;img src="flower.jpg" alt="A pink flower"&gt;</code></pre>
+                <p>Useful descriptive <code>alt</code> text helps people using screen readers and provides context if an image cannot load.</p>
+              </div>
+            </details>
+
+            <details class="lesson-detail" data-progress>
+              <summary>3. Classes and IDs</summary>
+              <div class="detail-content">
+                <p>Classes and IDs help CSS and JavaScript find specific elements.</p>
+                <pre><code>&lt;p class="welcome"&gt;Hello!&lt;/p&gt;
+&lt;button id="saveButton"&gt;Save&lt;/button&gt;</code></pre>
+                <p>A class can be shared by many elements. An ID should be unique within the page.</p>
+              </div>
+            </details>
+
+            <details class="lesson-detail" data-progress>
+              <summary>4. Forms and page structure</summary>
+              <div class="detail-content">
+                <p>HTML can create forms, input fields, lists, tables, navigation menus, and meaningful page sections.</p>
+                <pre><code>&lt;label for="name"&gt;Your name&lt;/label&gt;
+&lt;input id="name" name="name"&gt;
+&lt;button type="submit"&gt;Send&lt;/button&gt;</code></pre>
+                <p>HTML forms can collect information. Saving it securely or sending it somewhere usually requires additional JavaScript and/or server-side code.</p>
+              </div>
+            </details>
+
+            <details class="lesson-detail" data-progress>
+              <summary>5. What can HTML be used for?</summary>
+              <div class="detail-content">
+                <ul>
+                  <li>Personal websites and portfolios</li>
+                  <li>Articles, blogs, and documentation</li>
+                  <li>Online store product pages</li>
+                  <li>Forms, sign-in screens, and navigation</li>
+                  <li>Media pages and learning resources</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <aside class="lesson-sidebar">
+          <div class="sidebar-card">
+            <span class="sidebar-icon html-text">&lt;/&gt;</span>
+            <h3>HTML at a glance</h3>
+            <p><strong>Job:</strong> Structure</p>
+            <p><strong>Common files:</strong> <code>.html</code></p>
+            <p><strong>Examples:</strong> Headings, text, links, buttons</p>
+            <a href="#practice" class="text-link">Try the playground →</a>
+          </div>
+          <div class="sidebar-card key-idea">
+            <h3>Quick reminder</h3>
+            <p>If you want to add a new heading or paragraph, you usually start with HTML.</p>
+          </div>
+        </aside>
+      </div>
+
+      <div class="practice-question" data-mini-quiz data-answer="b">
+        <span class="eyebrow">QUICK CHECK · 1 QUESTION</span>
+        <h3>Which language creates a heading on a webpage?</h3>
+        <div class="answer-options">
+          <button type="button" data-option="a">CSS</button>
+          <button type="button" data-option="b">HTML</button>
+          <button type="button" data-option="c">JavaScript</button>
+        </div>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="page-section lesson-section" id="cssLesson">
+      <div class="lesson-title-row">
+        <span class="lesson-number css-number">02</span>
+        <div>
+          <span class="eyebrow">LESSON TWO</span>
+          <h2>CSS: Design the page</h2>
+          <p>Learn how to make content look the way you want.</p>
+        </div>
+      </div>
+
+      <div class="lesson-layout">
+        <div class="lesson-main">
+          <h3>What is CSS?</h3>
+          <p>
+            CSS means <strong>Cascading Style Sheets</strong>. It describes how HTML
+            elements should look, where they should appear, and how they should respond
+            to different screen sizes.
+          </p>
+
+          <div class="code-example">
+            <div class="code-example-header">
+              <span>Example: CSS</span>
+              <button class="copy-button" data-copy="cssCode">Copy code</button>
+            </div>
+            <pre><code id="cssCode">body {
+  background: #f4efff;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: purple;
+}
+
+button {
+  padding: 12px 20px;
+  border-radius: 10px;
+}</code></pre>
+          </div>
+
+          <div class="lesson-callout">
+            <span class="callout-icon">💡</span>
+            <p><strong>Remember:</strong> CSS needs elements to style. If your CSS selector does not match an element, that rule will not style it.</p>
+          </div>
+
+          <h3>Explore the CSS topics</h3>
+          <div class="accordion">
+            <details class="lesson-detail" data-progress>
+              <summary>1. Selectors, properties, and values</summary>
+              <div class="detail-content">
+                <p>In <code>h1 { color: purple; }</code>, <code>h1</code> is the selector, <code>color</code> is the property, and <code>purple</code> is its value.</p>
+                <pre><code>.card { background: white; }
+#mainTitle { font-size: 32px; }</code></pre>
+                <p>A dot selects a class. A hash selects an ID.</p>
+              </div>
+            </details>
+
+            <details class="lesson-detail" data-progress>
+              <summary>2. Layout, spacing, and size</summary>
+              <div class="detail-content">
+                <p>CSS can arrange elements using Flexbox and Grid, control space using margin and padding, and manage widths and heights.</p>
+                <pre><code>.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}</code></pre>
+                <p>This creates three equal columns when there is enough room. On a small screen, you might change it to one column.</p>
+              </div>
+            </details>
+
+            <details class="lesson-detail" data-progress>
+              <summary>3. Responsive design</summary>
+              <div class="detail-content">
+                <p>Responsive design helps a website work on phones, tablets, and computers.</p>
+                <pre><code>@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}</code></pre>
+                <p>This rule switches the grid to one column when the viewport is 600 pixels wide or less.</p>
+              </div>
+            </details>
+
+            <details class="lesson-detail" data-progress>
+              <summary>4. Animations and interactive states</summary>
+              <div class="detail-content">
+                <p>CSS can animate movement, fading, and color changes. Hover and focus states can help people understand which controls they can use.</p>
+                <pre><code>button {
+  transition: transform .2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}</code></pre>
+                <p>Keep motion comfortable, and make sure keyboard users can see which element has focus.</p>
+              </div>
+            </details>
+
+            <details class="lesson-detail" data-progress>
+              <summary>5. What can CSS be used for?</summary>
+              <div class="detail-content">
+                <ul>
+                  <li>Colors, fonts, gradients, and backgrounds</li>
+                  <li>Menus, cards, columns, and page layouts</li>
+                  <li>Transitions and animations</li>
+                  <li>Responsive mobile-friendly layouts</li>
+                  <li>Visual themes and accessible focus states</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <aside class="lesson-sidebar">
+          <div class="sidebar-card">
+            <span class="sidebar-icon css-text">✳</span>
+            <h3>CSS at a glance</h3>
+            <p><strong>Job:</strong> Appearance</p>
+            <p><strong>Common files:</strong> <code>.css</code></p>
+            <p><strong>Examples:</strong> Color, spacing, layout, animation</p>
+            <a href="#practice" class="text-link">Try the playground →</a>
+          </div>
+          <div class="sidebar-card key-idea">
+            <h3>Quick reminder</h3>
+            <p>If you want to change the color, size, or position of an element, CSS is usually the place to start.</p>
+          </div>
+        </aside>
+      </div>
+
+      <div class="practice-question" data-mini-quiz data-answer="c">
+        <span class="eyebrow">QUICK CHECK · 1 QUESTION</span>
+        <h3>Which language controls colors and spacing?</h3>
+        <div class="answer-options">
+          <button type="button" data-option="a">HTML</button>
+          <button type="button" data-option="b">JavaScript</button>
+          <button type="button" data-option="c">CSS</button>
+        </div>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="page-section lesson-section" id="jsLesson">
+      <div class="lesson-title-row">
+        <span class="lesson-number js-number">03</span>
+        <div>
+          <span class="eyebrow">LESSON THREE</span>
+          <h2>JavaScript: Make it work</h2>
+          <p>Learn how websites respond to actions and information.</p>
+        </div>
+      </div>
+
+      <div class="lesson-layout">
+        <div class="lesson-main">
+          <h3>What is JavaScript?</h3>
+          <p>
+            JavaScript is a programming language. It can respond to clicks,
+            check answers, update text, calculate totals, and work with information.
+          </p>
+
+          <div class="code-example">
+            <div class="code-example-header">
+              <span>Example: JavaScript</span>
+              <button class="copy-button" data-copy="jsCode">Copy code</button>
+            </div>
+            <pre><code id="jsCode">const button = document.querySelector("#helloButton");
+
+button.addEventListener("click", () => {
+  alert("Hello! The button works!");
+});</code></pre>
+          </div>
+
+          <div class="lesson-callout">
+            <span class="callout-icon">💡</span>
+            <p><strong>Remember:</strong> JavaScript can change the page, but it needs to find the correct HTML elements and use the right instructions.</p>
+          </div>
+
+          <h3>Explore the JavaScript topics</h3>
+          <div class="accordion">
+            <details class="lesson-detail" data-progress>
+              <summary>1. Variables and information</summary>
+              <div class="detail-content">
+                <p>Variables let a program keep track of information. Text is called a string, numbers represent numeric values, and booleans are either true or false.</p>
+                <pre><code>const learner = "Lana";
+let score = 0;
+const isReady = true;</code></pre>
+                <p>Use <code>const</code> when you will not reassign the variable. Use <code>let</code> when the variable needs to change.</p>
+              </div>
+            </details>
+
+            <details class="lesson-detail" data-progress>
+              <summary>2. Functions and decisions</summary>
+              <div class="detail-content">
+                <p>A function groups instructions. Conditions let your program choose what to do based on information.</p>
+                <pre><code>function checkScore(score) {
+  if (score >= 5) {
+    return "Great job!";
+  }
+  return "Keep practicing!";
+}</code></pre>
+              </div>
+            </details>
+
+            <details class="lesson-detail" data-progress>
+              <summary>3. Events and buttons</summary>
+              <div class="detail-content">
+                <p>An event happens when something occurs, such as a click. An event listener tells JavaScript what to do when that event happens.</p>
+                <pre><code>button.addEventListener("click", () => {
+  message.textContent = "You clicked!";
+});</code></pre>
+                <p>The variables <code>button</code> and <code>message</code> must refer to existing elements for this example to work.</p>
+              </div>
+            </details>
+
+            <details class="lesson-detail" data-progress>
+              <summary>4. Forms, storage, and APIs</summary>
+              <div class="detail-content">
+                <p>JavaScript can read form values, check inputs, store simple preferences in the browser, and request data from APIs.</p>
+                <p>Browser storage is not a secure place for passwords or secrets. Private accounts, sensitive records, and protected permissions require a secure backend.</p>
+              </div>
+            </details>
+
+            <details class="lesson-detail" data-progress>
+              <summary>5. What can JavaScript be used for?</summary>
+              <div class="detail-content">
+                <ul>
+                  <li>Quizzes, games, and calculators</li>
+                  <li>Menus, tabs, and interactive controls</li>
+                  <li>Forms and validation</li>
+                  <li>Dashboards, charts, and filters</li>
+                  <li>Loading and updating data</li>
+                  <li>Web applications and server-side programming with suitable tools</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <aside class="lesson-sidebar">
+          <div class="sidebar-card">
+            <span class="sidebar-icon js-text">JS</span>
+            <h3>JavaScript at a glance</h3>
+            <p><strong>Job:</strong> Behavior</p>
+            <p><strong>Common files:</strong> <code>.js</code></p>
+            <p><strong>Examples:</strong> Clicks, scores, data, updates</p>
+            <a href="#practice" class="text-link">Try the playground →</a>
+          </div>
+          <div class="sidebar-card key-idea">
+            <h3>Quick reminder</h3>
+            <p>If you want a button to perform an action, JavaScript is often the answer.</p>
+          </div>
+        </aside>
+      </div>
+
+      <div class="practice-question" data-mini-quiz data-answer="a">
+        <span class="eyebrow">QUICK CHECK · 1 QUESTION</span>
+        <h3>Which language can check an answer and update a quiz score?</h3>
+        <div class="answer-options">
+          <button type="button" data-option="a">JavaScript</button>
+          <button type="button" data-option="b">CSS</button>
+          <button type="button" data-option="c">HTML only</button>
+        </div>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="page-section teamwork-section">
+      <div class="section-heading">
+        <span class="eyebrow">PUTTING IT ALL TOGETHER</span>
+        <h2>One website. Three jobs.</h2>
+        <p>Here is what happens when you build a button that changes a message.</p>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step-card">
+          <span class="step-number">1</span>
+          <h3>HTML creates it</h3>
+          <pre><code>&lt;p id="message"&gt;Hello!&lt;/p&gt;
+&lt;button id="changeButton"&gt;
+  Change message
+&lt;/button&gt;</code></pre>
+          <p>The page now has a paragraph and a button.</p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-number">2</span>
+          <h3>CSS styles it</h3>
+          <pre><code>button {
+  background: purple;
+  color: white;
+  padding: 12px;
+}</code></pre>
+          <p>The button gets its appearance and spacing.</p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-number">3</span>
+          <h3>JavaScript adds action</h3>
+          <pre><code>changeButton.addEventListener(
+  "click", () => {
+    message.textContent = "You did it!";
+  }
+);</code></pre>
+          <p>Clicking the button changes the paragraph.</p>
+        </article>
+      </div>
+
+      <div class="simple-explanation">
+        <span class="simple-explanation-icon">🧩</span>
+        <div>
+          <h3>Why keep the files separate?</h3>
+          <p>Separate files make a project easier to read, update, and debug. HTML holds the page content, CSS handles the design, and JavaScript handles behavior. They connect through HTML elements, CSS selectors, and JavaScript references.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section playground-section" id="practice">
+      <div class="section-heading">
+        <span class="eyebrow">HANDS-ON PRACTICE</span>
+        <h2>Try the code playground</h2>
+        <p>Change the message, choose a color, and click the button. Your mini webpage updates immediately.</p>
+      </div>
+
+      <div class="playground">
+        <div class="playground-controls">
+          <span class="playground-label">YOUR SETTINGS</span>
+          <label for="playgroundMessage">1. Write a message</label>
+          <input id="playgroundMessage" type="text" maxlength="100"
+            value="You are learning to code!" autocomplete="off">
+
+          <label for="playgroundColor">2. Pick a button color</label>
+          <select id="playgroundColor">
+            <option value="purple">Purple</option>
+            <option value="pink">Pink</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+          </select>
+
+          <button type="button" class="button button-primary" id="applyPlayground">
+            Update preview →
+          </button>
+          <p class="help-text">Tip: Change the message and press Update preview.</p>
+        </div>
+
+        <div class="preview-window">
+          <div class="preview-topbar">
+            <span class="preview-lights"><i></i><i></i><i></i></span>
+            <span>Live preview</span>
+            <span class="preview-status"><span class="live-dot"></span> Ready</span>
+          </div>
+          <div class="preview-page" id="playgroundPreview">
+            <span class="preview-tag">MY FIRST WEBPAGE</span>
+            <h3 id="playgroundHeading">Hello, World!</h3>
+            <p id="playgroundMessageOutput">You are learning to code!</p>
+            <button type="button" id="playgroundAction" class="preview-action">
+              Click me!
+            </button>
+            <p id="playgroundFeedback" class="preview-feedback" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="playground-explanation">
+        <div><span class="explanation-number">HTML</span><p>The preview has a heading, a paragraph, and a button.</p></div>
+        <div><span class="explanation-number">CSS</span><p>The preview styles the text, background, and button.</p></div>
+        <div><span class="explanation-number">JavaScript</span><p>The controls update the preview and make the button respond.</p></div>
+      </div>
+    </section>
+
+    <section class="page-section final-quiz-section" id="finalQuiz">
+      <div class="section-heading">
+        <span class="eyebrow">CHECK WHAT YOU'VE LEARNED</span>
+        <h2>Your final knowledge quiz</h2>
+        <p>Ten beginner-friendly questions. Choose your answer, move between questions, and submit when you're ready.</p>
+      </div>
+
+      <div class="quiz-shell">
+        <aside class="quiz-summary">
+          <div class="quiz-icon">✓</div>
+          <h3>Code Academy Quiz</h3>
+          <p>Take your time. You can change your answers before submitting.</p>
+          <div class="quiz-stat"><span>Total questions</span><strong id="quizTotal">10</strong></div>
+          <div class="quiz-stat"><span>Answered</span><strong id="quizAnswered">0</strong></div>
+          <div class="quiz-stat"><span>Current question</span><strong id="quizCurrent">1 / 10</strong></div>
+          <div class="progress-track" role="progressbar" aria-label="Quiz completion"
+            aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="quizProgress">
+            <div id="quizProgressBar"></div>
+          </div>
+          <p id="quizProgressLabel">0% answered</p>
+        </aside>
+
+        <div class="quiz-main">
+          <form id="quizForm">
+            <div id="quizQuestions"></div>
+            <div class="quiz-controls" id="quizControls">
+              <button type="button" class="button button-secondary" id="quizBack" disabled>← Previous</button>
+              <span id="quizStepLabel">Question 1 of 10</span>
+              <button type="button" class="button button-primary" id="quizNext">Next →</button>
+            </div>
+            <button type="submit" class="button button-primary submit-quiz" id="submitQuiz" hidden>
+              Submit my answers
+            </button>
+          </form>
+
+          <div class="quiz-results" id="quizResults" hidden aria-live="polite">
+            <div class="result-icon" id="resultIcon">★</div>
+            <span class="eyebrow">QUIZ COMPLETE</span>
+            <h3 id="resultsTitle">Well done!</h3>
+            <p id="resultsMessage"></p>
+            <div class="score-display" id="resultsScore">0 / 10</div>
+            <p id="resultsPercent"></p>
+            <div id="answerReview" class="answer-review"></div>
+            <button type="button" class="button button-primary" id="retryQuiz">Try again</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section finish-section">
+      <div class="finish-icon">&lt;/&gt;</div>
+      <span class="eyebrow">YOU'VE TAKEN THE FIRST STEP</span>
+      <h2>Keep experimenting. <span>Keep creating.</span></h2>
+      <p>You don't have to learn everything in one day. Try changing a line, see what happens, and learn from the result. That's how developers grow.</p>
+      <a href="#start" class="button button-primary">Back to the top ↑</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="../index.html">
+      <span class="brand-mark">&lt;/&gt;</span>
+      <span>Code <strong>Academy</strong></span>
+    </a>
+    <p>Learn a little. Build a lot.</p>
+    <a href="../index.html">Back to Beauty Home</a>
+  </footer>
+</body>
+</html>
