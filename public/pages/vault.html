@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#120b25">
+  <title>Lana's Secret Vault ♢</title>
+
+  <link rel="stylesheet" href="css/vault.css">
+  <script src="js/vault.js" defer></script>
+</head>
+<body class="vault-page">
+  <header class="vault-header">
+    <a class="vault-brand" href="../index.html">
+      <span class="vault-brand-icon">♢</span>
+      <span>Lana's <strong>Secret Vault</strong></span>
+    </a>
+
+    <nav class="vault-nav" aria-label="Vault navigation">
+      <a href="../index.html">Home</a>
+      <a href="#treasures">Treasures</a>
+      <a href="#memoryBox">Memory Box</a>
+      <a href="#secretLock">Secret Lock</a>
+      <a href="#vaultJournal">Journal</a>
+    </nav>
+
+    <button class="vault-menu-button" id="vaultMenuButton"
+      aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </header>
+
+  <main>
+    <section class="vault-hero">
+      <div class="vault-hero-content">
+        <p class="vault-eyebrow">✦ A PLACE FOR THE PRICELESS ✦</p>
+        <h1>Welcome to the <span>Secret Vault</span></h1>
+        <p class="vault-hero-description">
+          Some things are too precious to leave scattered among ordinary days.
+          This is your little corner of the universe for memories, wishes,
+          favorite moments, and treasures worth keeping.
+        </p>
+        <div class="vault-hero-actions">
+          <a href="#treasures" class="vault-button vault-button-primary">
+            Explore the Vault ✧
+          </a>
+          <a href="#memoryBox" class="vault-button vault-button-quiet">
+            Save a Memory ♡
+          </a>
+        </div>
+        <div class="vault-signature">Reserved for Lana, keeper of the magic. ♡</div>
+      </div>
+
+      <div class="vault-crystal-stage" aria-hidden="true">
+        <div class="crystal-orbit crystal-orbit-one"></div>
+        <div class="crystal-orbit crystal-orbit-two"></div>
+        <div class="crystal-glow"></div>
+        <div class="crystal-large">♢</div>
+        <div class="crystal-small crystal-small-one">✧</div>
+        <div class="crystal-small crystal-small-two">✦</div>
+        <div class="crystal-small crystal-small-three">♡</div>
+        <div class="crystal-caption">THE KEEPER'S SANCTUARY</div>
+      </div>
+    </section>
+
+    <section class="vault-stat-strip" aria-label="Vault statistics">
+      <article class="vault-stat">
+        <span>♢</span>
+        <div><strong id="vaultTreasureCount">0</strong><small>Treasures saved</small></div>
+      </article>
+      <article class="vault-stat">
+        <span>♡</span>
+        <div><strong id="vaultFavoriteCount">0</strong><small>Favorite treasures</small></div>
+      </article>
+      <article class="vault-stat">
+        <span>✧</span>
+        <div><strong id="vaultMemoryCount">0</strong><small>Personal memories</small></div>
+      </article>
+      <article class="vault-stat">
+        <span>☽</span>
+        <div><strong id="vaultWishCount">0</strong><small>Wishes collected</small></div>
+      </article>
+    </section>
+
+    <section class="vault-section" id="treasures">
+      <div class="vault-section-heading">
+        <p class="vault-eyebrow">THE COLLECTION</p>
+        <h2>Little things. <span>Endless meaning.</span></h2>
+        <p>Explore the collection or add something special of your own.</p>
+      </div>
+
+      <div class="vault-toolbar">
+        <label class="vault-search">
+          <span aria-hidden="true">⌕</span>
+          <input id="vaultSearch" type="search"
+            placeholder="Search your treasures..." aria-label="Search treasures">
+        </label>
+
+        <label class="vault-filter-label" for="vaultCategoryFilter">Category</label>
+        <select id="vaultCategoryFilter">
+          <option value="all">All treasures</option>
+          <option value="memory">Memories</option>
+          <option value="message">Messages</option>
+          <option value="wish">Wishes</option>
+          <option value="favorite">Favorites</option>
+        </select>
+
+        <button class="vault-button vault-button-primary" id="showTreasureForm">
+          + Add Treasure
+        </button>
+      </div>
+
+      <form class="vault-form panel" id="treasureForm" hidden>
+        <div class="vault-form-heading">
+          <div><p class="vault-eyebrow">NEW DISCOVERY</p><h3>Add a Treasure</h3></div>
+          <button type="button" class="vault-icon-button"
+            id="closeTreasureForm" aria-label="Close form">×</button>
+        </div>
+
+        <div class="vault-form-grid">
+          <label>Treasure title
+            <input id="treasureTitle" maxlength="90" required
+              placeholder="A moment worth remembering">
+          </label>
+
+          <label>Category
+            <select id="treasureCategory" required>
+              <option value="memory">Memory</option>
+              <option value="message">Message</option>
+              <option value="wish">Wish</option>
+            </select>
+          </label>
+
+          <label class="vault-form-full">Your treasure
+            <textarea id="treasureContent" rows="4" maxlength="3000" required
+              placeholder="Write down why this matters to you..."></textarea>
+          </label>
+
+          <label>Symbol
+            <select id="treasureSymbol">
+              <option value="♡">♡ Heart</option>
+              <option value="✧">✧ Sparkle</option>
+              <option value="♢">♢ Crystal</option>
+              <option value="☽">☽ Moon</option>
+              <option value="🌷">Flower</option>
+              <option value="⭐">Star</option>
+            </select>
+          </label>
+        </div>
+
+        <button class="vault-button vault-button-primary" type="submit">
+          Place in the Vault ♢
+        </button>
+        <p class="vault-status" id="treasureFormStatus" aria-live="polite"></p>
+      </form>
+
+      <div class="vault-treasure-grid" id="vaultTreasureGrid">
+        <!-- JavaScript renders the saved treasure cards here. -->
+      </div>
+
+      <div class="vault-empty-state" id="vaultEmptyState" hidden>
+        <span>♢</span>
+        <h3>This chamber is waiting for a treasure.</h3>
+        <p>Add your first memory, message, or wish to begin your collection.</p>
+        <button class="vault-button vault-button-primary" id="emptyAddTreasure">
+          Add the First Treasure
+        </button>
+      </div>
+    </section>
+
+    <section class="vault-section vault-memory-section" id="memoryBox">
+      <div class="vault-section-heading">
+        <p class="vault-eyebrow">THE MEMORY CHAMBER</p>
+        <h2>Preserve a <span>beautiful moment.</span></h2>
+        <p>
+          A thought, a dream, a moment that made you smile.
+          Write it down and give it a permanent place in your collection.
+        </p>
+      </div>
+
+      <div class="vault-memory-layout">
+        <div class="vault-memory-art" aria-hidden="true">
+          <div class="memory-moon">☾</div>
+          <div class="memory-book">
+            <span>THE</span>
+            <strong>MEMORY<br>BOOK</strong>
+            <span class="memory-book-heart">♡</span>
+          </div>
+          <div class="memory-floating memory-float-one">✧</div>
+          <div class="memory-floating memory-float-two">♡</div>
+          <div class="memory-floating memory-float-three">✦</div>
+        </div>
+
+        <form class="vault-form panel" id="memoryForm">
+          <p class="vault-eyebrow">A NOTE TO KEEP</p>
+          <h3>Capture this moment</h3>
+
+          <label for="memoryTitle">Memory title</label>
+          <input id="memoryTitle" maxlength="90" required
+            placeholder="The day I want to remember">
+
+          <label for="memoryDate">When did it happen?</label>
+          <input id="memoryDate" type="date">
+
+          <label for="memoryText">Tell the story</label>
+          <textarea id="memoryText" rows="5" maxlength="3000" required
+            placeholder="What happened? How did it make you feel?"></textarea>
+
+          <button class="vault-button vault-button-primary" type="submit">
+            Preserve This Memory ♡
+          </button>
+          <p class="vault-status" id="memoryStatus" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="vault-section" id="secretLock">
+      <div class="vault-section-heading">
+        <p class="vault-eyebrow">THE INNER SANCTUM</p>
+        <h2>A little <span>secret chamber.</span></h2>
+        <p>
+          Set a personal combination and use it to open this playful
+          in-page chamber. This is a fun puzzle, not secure authentication.
+        </p>
+      </div>
+
+      <div class="vault-lock-panel panel">
+        <div class="vault-lock-art" aria-hidden="true">
+          <div class="lock-ring">✧</div>
+          <div class="lock-body"><span>♢</span></div>
+          <div class="lock-keyhole"></div>
+        </div>
+
+        <div class="vault-lock-content">
+          <p class="vault-eyebrow">COMBINATION CONSOLE</p>
+          <h3 id="lockHeading">The chamber awaits its keeper.</h3>
+          <p id="lockDescription">
+            Create a combination of at least four characters, then enter
+            it to open the secret chamber on this page.
+          </p>
+
+          <form id="lockSetupForm" class="vault-lock-form">
+            <label for="lockSetupCode">Create your combination</label>
+            <input id="lockSetupCode" type="password" minlength="4"
+              maxlength="40" autocomplete="new-password" required
+              placeholder="At least 4 characters">
+            <label for="lockSetupConfirm">Confirm combination</label>
+            <input id="lockSetupConfirm" type="password" minlength="4"
+              maxlength="40" autocomplete="new-password" required
+              placeholder="Enter it again">
+            <button class="vault-button vault-button-primary" type="submit">
+              Set Combination
+            </button>
+          </form>
+
+          <form id="lockOpenForm" class="vault-lock-form" hidden>
+            <label for="lockEntryCode">Enter your combination</label>
+            <input id="lockEntryCode" type="password" maxlength="40"
+              autocomplete="off" required placeholder="Your combination">
+            <button class="vault-button vault-button-primary" type="submit">
+              Open Chamber ♢
+            </button>
+          </form>
+
+          <div class="vault-status" id="lockStatus" aria-live="polite"></div>
+
+          <div class="vault-secret-room" id="secretRoom" hidden>
+            <span class="secret-room-symbol">✧</span>
+            <h3>Welcome inside, Keeper.</h3>
+            <p>
+              You found your way into the secret chamber. May you always
+              make room for the things that matter to you.
+            </p>
+            <button class="vault-button vault-button-quiet" id="closeSecretRoom">
+              Close Chamber
+            </button>
+          </div>
+        </div>
+      </div>
+      <p class="vault-security-note">
+        ♡ This combination is stored in this browser and is not encrypted.
+        Don't use a real password or store genuinely sensitive information here.
+      </p>
+    </section>
+
+    <section class="vault-section vault-journal-section" id="vaultJournal">
+      <div class="vault-section-heading">
+        <p class="vault-eyebrow">THE KEEPER'S JOURNAL</p>
+        <h2>Thoughts from <span>the heart.</span></h2>
+        <p>Leave a little note for yourself to revisit later.</p>
+      </div>
+
+      <div class="vault-journal-layout">
+        <form class="vault-form panel" id="journalForm">
+          <label for="journalTitle">Journal title</label>
+          <input id="journalTitle" maxlength="90" required
+            placeholder="A thought for today">
+
+          <label for="journalEntry">Your entry</label>
+          <textarea id="journalEntry" rows="5" maxlength="3000" required
+            placeholder="Write freely. This space is yours."></textarea>
+
+          <button class="vault-button vault-button-primary" type="submit">
+            Save Journal Entry ✧
+          </button>
+          <p class="vault-status" id="journalStatus" aria-live="polite"></p>
+        </form>
+
+        <div class="vault-journal-list" id="vaultJournalList">
+          <!-- Journal entries appear here. -->
+        </div>
+      </div>
+    </section>
+
+    <section class="vault-closing">
+      <span>♢</span>
+      <h2>Not everything precious has a price.</h2>
+      <p>Some treasures are the memories we choose to keep. ♡</p>
+      <a class="vault-button vault-button-primary" href="../index.html">
+        Return Home
+      </a>
+    </section>
+  </main>
+
+  <footer class="vault-footer">
+    <p>Created with care for Lana. ♡</p>
+    <p>Your vault is saved locally in this browser.</p>
+  </footer>
+
+  <div class="vault-toast" id="vaultToast" role="status" aria-live="polite"></div>
+</body>
+</html>
