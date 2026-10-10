@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#210f26">
+  <title>Heart Catcher | Beauty</title>
+  <meta name="description" content="Catch the falling hearts before time runs out. Ready, queen?">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/pages/css/hearts.css">
+  <script src="/pages/js/hearts.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">♛ BEAUTY</a>
+    <a class="back" href="/">← Magical Realms</a>
+  </header>
+
+  <main class="page-wrap">
+    <section class="page-hero">
+      <div class="big-icon" aria-hidden="true">❤️</div>
+      <span class="eyebrow">LANA'S MAGICAL WORLD</span>
+      <h1>Heart Catcher</h1>
+      <p>Catch the falling hearts before time runs out. Ready, queen?</p>
+    </section>
+
+    <section class="workspace">
+      <div class="workspace-heading">
+        <h2>Play Heart Catcher</h2>
+        <p>Move your catcher with the arrow keys or buttons.</p>
+      </div>
+      <div id="appArea" class="app-area"></div>
+      <p id="status" class="status" aria-live="polite"></p>
+    </section>
+
+    <section class="collection">
+      <div class="collection-head">
+        <h2>Your Collection</h2>
+        <button id="clearItems" class="quiet-button" type="button">Clear collection</button>
+      </div>
+      <div id="collectionList" class="collection-list"></div>
+      <p id="emptyState" class="empty-state">Your collection is waiting for its first little bit of magic.</p>
+    </section>
+
+    <footer>
+      <p>Made with love, just for you, Lana. ♡</p>
+      <small>Saved in this browser on this device.</small>
+    </footer>
+  </main>
+</body>
+</html>
