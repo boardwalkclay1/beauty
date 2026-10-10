@@ -1,64 +1,173 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Beauty</title>
+
+https://fonts.googleapis.com
+https://fonts.gstatic.com
+
+https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap
 
 css/style.css
 </head>
 
 <body>
 
-<div id="particles"></div>
+<div class="particles"></div>
 
-<header>
+<nav class="navbar">
 
-<h1>Beauty</h1>
+<div class="logo">
+👑 BEAUTY
+</div>
 
-<p>Created for the Most Beautiful Girl in the World</p>
+<div class="nav-links">
 
-</header>
+pages/garden.htmlRose Garden</a>
 
-<section class="menu">
+pages/teddy.htmlTeddy Forest</a>
 
-<button onclick="showSection('garden')">
-🌹 Rose Garden
-</button>
+pages/vault.htmlBeauty Vault</a>
 
-<button onclick="showSection('teddy')">
-🧸 Teddy Forest
-</button>
+pages/letters.htmlLetters</a>
 
-<button onclick="showSection('vault')">
-💎 Beauty Vault
-</button>
+pages/riddles.htmlRiddles</a>
 
-<button onclick="showSection('riddles')">
-🧩 Riddles
-</button>
+pages/palace.htmlQueen Palace</a>
 
-<button onclick="showSection('mirror')">
-✨ Magic Mirror
-</button>
+pages/mirror.htmlMirror</a>
 
-</section>
-
-<div id="content">
-
-<h2>Welcome Beautiful</h2>
-
-<p>
-This world was created just for you.
-</p>
+pages/hearts.htmlHeart Catcher</a>
 
 </div>
 
-js/poems.jsscript>
-js/riddles.jsscript>
-js/compliments.jsscript>
-js/app.jsscript>
+</nav>
+
+<section class="hero">
+
+<h1>Beauty</h1>
+
+<p>
+Created For The Most Beautiful Girl In The World
+</p>
+
+#realms
+Enter Her World ✨
+</a>
+
+</section>
+
+<section id="realms" class="realms">
+
+<h2>Magical Realms</h2>
+
+<div class="realm-grid">
+
+pages/garden.html
+
+<div class="emoji">🌹</div>
+
+<h3>Rose Garden</h3>
+
+<p>Collect roses and unlock compliments.</p>
+
+</a>
+
+pages/teddy.html
+
+<div class="emoji">🧸</div>
+
+<h3>Teddy Forest</h3>
+
+<p>Meet magical teddy bears.</p>
+
+</a>
+
+pages/vault.html
+
+<div class="emoji">💎</div>
+
+<h3>Beauty Vault</h3>
+
+<p>Special poems and treasures.</p>
+
+</a>
+
+pages/letters.html
+
+<div class="emoji">💌</div>
+
+<h3>Letters</h3>
+
+<p>Heartfelt messages and notes.</p>
+
+</a>
+
+pages/riddles.html
+
+<div class="emoji">🧩</div>
+
+<h3>Riddles</h3>
+
+<p>Play beauty-themed riddles.</p>
+
+</a>
+
+pages/palace.html
+
+<div class="emoji">👑</div>
+
+<h3>Queen Palace</h3>
+
+<p>Your royal kingdom.</p>
+
+</a>
+
+pages/mirror.html
+
+<div class="emoji">✨</div>
+
+<h3>Magic Mirror</h3>
+
+<p>Infinite compliments.</p>
+
+</a>
+
+pages/hearts.html
+
+<div class="emoji">❤️</div>
+
+<h3>Heart Catcher</h3>
+
+<p>A beautiful mini game.</p>
+
+</a>
+
+</div>
+
+</section>
+
+<section class="daily-message">
+
+<div class="message-card">
+
+<h2>Today's Beauty Message</h2>
+
+<p id="message">
+The stars wish they could shine the way you do.
+</p>
+
+<button id="newMessage">
+Show Another Message
+</button>
+
+</div>
+
+</section>
+
+js/home.jsscript>
 
 </body>
 </html>
