@@ -1,0 +1,84 @@
+
+/* TEDDY FOREST — cozy honey, caramel and starlight */
+@import url("./garden.css");
+
+:root {
+  --gold: #f5d59d;
+  --gold-bright: #ffebc5;
+  --pink: #f3b9c9;
+  --pink-light: #ffe2e9;
+  --purple: #d8b8ff;
+  --panel: rgba(52, 34, 34, .78);
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 15% 15%, #d18a4630, transparent 35%),
+    radial-gradient(ellipse at 85% 35%, #b8758730, transparent 35%),
+    linear-gradient(150deg, #160d10, #2b171d 55%, #120c12);
+}
+
+body::before {
+  background:
+    radial-gradient(circle at 20% 30%, #ffd18b26 0 2px, transparent 3px),
+    radial-gradient(circle at 75% 65%, #ffb6c81e 0 3px, transparent 4px),
+    radial-gradient(circle at 45% 80%, #ffffff16 0 1px, transparent 2px);
+  background-size: 110px 120px, 160px 150px, 90px 90px;
+  animation: teddyFireflies 24s linear infinite;
+}
+
+.big-icon {
+  border-color: #f7d7a877;
+  background:
+    radial-gradient(circle at 30% 20%, #fff6d833, transparent 55%),
+    linear-gradient(145deg, #76503c, #2e1a22);
+  box-shadow:
+    0 0 0 9px #f3d59a0a,
+    0 0 42px #eebc6840,
+    inset 0 1px 0 #ffffff30;
+}
+
+.workspace,
+.collection {
+  border-color: #f3d59a30;
+  background:
+    linear-gradient(135deg, #fff0d30b, transparent 55%),
+    rgba(42, 25, 30, .82);
+}
+
+.workspace::before,
+.collection::before {
+  background: linear-gradient(90deg, transparent, #f6d9a1, #f0a5b9, transparent);
+}
+
+.item-card {
+  border-color: #f3d59a20;
+  background:
+    radial-gradient(ellipse at top left, #f4ca8c0d, transparent 65%),
+    #1e1418b8;
+}
+
+.item-card:hover {
+  border-color: #f3d59a70;
+  box-shadow: 0 15px 35px #0004, 0 0 22px #f3d59a0c;
+}
+
+.item-card h3 {
+  color: #ffdfad;
+}
+
+.action-button {
+  background: linear-gradient(110deg, #f5d59d, #e7a7b7 55%, #f5d59d);
+  color: #351b20;
+}
+
+.empty-state {
+  border-color: #f3d59a36;
+  background: #f3d59a05;
+}
+
+@keyframes teddyFireflies {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-35px); }
+  100% { transform: translateY(0); }
+}
