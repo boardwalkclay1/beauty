@@ -2,52 +2,60 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Meridian | Bodywork Beyond Massage</title>
+<meta name="description" content="Luxury bodywork experiences focused on restoration, recovery, nervous system regulation, and therapeutic wellness.">
 
-<meta name="description" content="Luxury bodywork experiences designed to restore structure, regulate the nervous system, and reconnect you with your body.">
-
-<meta property="og:title" content="Meridian | Bodywork Beyond Massage">
-<meta property="og:description" content="Luxury bodywork experiences rooted in restoration, recovery, and nervous system support.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="/assets/social-preview.jpg">
+<meta property="og:title" content="Meridian | Bodywork Beyond Massage">
+<meta property="og:description" content="A Practice In Listening">
+<meta property="og:image" content="/assets/images/social-preview.jpg">
 
-/css/home.css
+<meta name="theme-color" content="#191714">
 
-/js/home.jsscript>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/home.css">
 </head>
+
 <body>
 
-<header class="header">
+<header class="topbar">
 
-<nav class="navbar">
+<div class="container nav">
 
-/
+<a href="/" class="logo">
 MERIDIAN
 </a>
 
-<div class="nav-links">
+<button id="menuBtn" class="menu-btn">
+☰
+</button>
 
-/pages/about.htmlAbout</a>
-/pages/services.htmlServices</a>
-/pages/book.htmlBook</a>
-/pages/contact.htmlContact</a>
-/pages/dashboard.htmlDashboard</a>
+<nav id="mobileNav" class="nav-links">
 
-</div>
+<a href="/pages/about.html">About</a>
+<a href="/pages/services.html">Services</a>
+<a href="/pages/book.html">Book</a>
+<a href="/pages/contact.html">Contact</a>
 
 </nav>
+
+</div>
 
 </header>
 
 <section class="hero">
 
-<div class="overlay"></div>
+<div class="hero-overlay"></div>
 
 <div class="hero-content">
 
-<span class="eyebrow">
+<span class="subtitle">
 A PRACTICE IN LISTENING
 </span>
 
@@ -55,99 +63,105 @@ A PRACTICE IN LISTENING
 MERIDIAN
 </h1>
 
+<p>
+Bodywork experiences designed to restore
+movement, regulate the nervous system,
+and reconnect you with yourself.
+</p>
+
+<div class="hero-buttons">
+
+<a href="/pages/book.html" class="gold-btn">
+Book A Session
+</a>
+
+<a href="/pages/services.html" class="glass-btn">
+Explore Services
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="philosophy">
+
+<div class="container narrow">
+
 <h2>
 Bodywork Beyond Massage
 </h2>
 
 <p>
-Therapeutic bodywork experiences designed
-to restore movement, relieve tension,
-and support full-system wellness.
+Every Meridian session blends clinical precision,
+therapeutic intention, and luxury care to create a
+deeply restorative experience tailored to your body.
 </p>
-
-<div class="hero-actions">
-
-/pages/book.html
-Book A Session
-</a>
-
-/pages/services.html
-Explore Treatments
-</a>
-
-</div>
 
 </div>
 
 </section>
 
-<section class="intro">
+<section class="featured-services">
 
 <div class="container">
 
-<h2>
-The Meridian Philosophy
-</h2>
+<div class="section-heading">
 
-<p>
-Every service is intentionally crafted to support structural alignment, nervous system regulation, emotional wellbeing, and physical restoration.
-</p>
+<span>SIGNATURE EXPERIENCES</span>
+
+<h2>
+The Elements Collection
+</h2>
 
 </div>
 
-</section>
+<div class="services-grid">
 
-<section class="services-preview">
-
-<h2>
-Elemental Experiences
-</h2>
-
-<div class="card-grid">
-
-/pages/meridian-reset.html
+<a href="/pages/meridian-reset.html" class="service-card">
 <h3>Meridian Reset</h3>
 <p>Foundation Element</p>
 <span>$280</span>
 </a>
 
-/pages/flowline-ritual.html
+<a href="/pages/flowline-ritual.html" class="service-card">
 <h3>Flowline Ritual</h3>
 <p>Water Element</p>
 <span>$235</span>
 </a>
 
-/pages/the-drift.html
+<a href="/pages/the-drift.html" class="service-card">
 <h3>The Drift</h3>
 <p>Ether Element</p>
 <span>$260</span>
 </a>
 
-/pages/combustion-point.html
+<a href="/pages/combustion-point.html" class="service-card">
 <h3>Combustion Point</h3>
 <p>Fire Element</p>
 <span>$250</span>
 </a>
 
-/pages/headwind.html
+<a href="/pages/headwind.html" class="service-card">
 <h3>Headwind</h3>
 <p>Air Element</p>
 <span>From $210</span>
 </a>
 
-/pages/root-layer.html
+<a href="/pages/root-layer.html" class="service-card">
 <h3>Root Layer</h3>
 <p>Earth Element</p>
 <span>From $195</span>
 </a>
 
-/pages/pulseline-protocol.html
-<h3>Pulseline Protocol</h3>
+<a href="/pages/pulseline-protocol.html" class="service-card">
+<h3>PulseLine Protocol</h3>
 <p>Kinetic Element</p>
 <span>$240</span>
 </a>
 
-/pages/the-compass.html
+<a href="/pages/the-compass.html" class="service-card">
 <h3>The Compass</h3>
 <p>Integration Element</p>
 <span>From $250</span>
@@ -155,25 +169,33 @@ Elemental Experiences
 
 </div>
 
+</div>
+
 </section>
 
 <section class="cta">
+
+<div class="container narrow">
 
 <h2>
 Begin Your Reset
 </h2>
 
 <p>
-Choose the experience that meets you where you are.
+Reserve an experience designed specifically for your needs.
 </p>
 
-/pages/book.html
-Reserve Your Session
+<a href="/pages/book.html" class="gold-btn">
+Reserve Now
 </a>
+
+</div>
 
 </section>
 
 <footer>
+
+<div class="container">
 
 <h3>MERIDIAN</h3>
 
@@ -183,13 +205,25 @@ Bodywork Beyond Massage
 
 <div class="footer-links">
 
-/pages/about.htmlAbout</a>
-/pages/services.htmlServices</a>
-/pages/contact.htmlContact</a>
+<a href="/pages/about.html">About</a>
+<a href="/pages/services.html">Services</a>
+<a href="/pages/book.html">Book</a>
+<a href="/pages/contact.html">Contact</a>
+
+</div>
 
 </div>
 
 </footer>
+
+<script>
+const menuBtn = document.getElementById('menuBtn');
+const mobileNav = document.getElementById('mobileNav');
+
+menuBtn.addEventListener('click', () => {
+mobileNav.classList.toggle('show');
+});
+</script>
 
 </body>
 </html>
