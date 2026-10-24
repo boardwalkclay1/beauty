@@ -1,44 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Book A Session | Meridian</title>
 
-/css/booking.css
-
+<link rel="stylesheet" href="/css/home.css">
 </head>
+
 <body>
 
-<section class="booking-container">
+<header class="topbar">
 
-<h1>
-Reserve A Session
-</h1>
+<div class="container nav">
+
+<a href="/" class="logo">MERIDIAN</a>
+
+<nav class="nav-links show">
+<a href="/">Home</a>
+<a href="/pages/services.html">Services</a>
+<a href="/pages/contact.html">Contact</a>
+</nav>
+
+</div>
+
+</header>
+
+<section class="featured-services" style="padding-top:180px;">
+
+<div class="container narrow">
+
+<div class="section-heading">
+
+<span>BOOK A SESSION</span>
+
+<h2>Reserve Your Experience</h2>
+
+</div>
 
 <form id="bookingForm">
 
-<input
-type="text"
-name="name"
-placeholder="Full Name"
-required>
+<input type="text" name="name" placeholder="Full Name" required>
 
-<input
-type="email"
-name="email"
-placeholder="Email"
-required>
+<br><br>
 
-<input
-type="tel"
-name="phone"
-placeholder="Phone Number"
-required>
+<input type="email" name="email" placeholder="Email Address" required>
 
-<select name="service">
+<br><br>
+
+<input type="tel" name="phone" placeholder="Phone Number" required>
+
+<br><br>
+
+<select name="service" required>
+
+<option value="">Choose A Service</option>
 
 <option>Meridian Reset</option>
 <option>Flowline Ritual</option>
@@ -46,60 +63,49 @@ required>
 <option>Combustion Point</option>
 <option>Headwind</option>
 <option>Root Layer</option>
-<option>Pulseline Protocol</option>
+<option>PulseLine Protocol</option>
 <option>The Compass</option>
 
 </select>
 
-<input type="date" name="date">
+<br><br>
 
-<input type="time" name="time">
+<textarea name="notes" rows="6" placeholder="Notes"></textarea>
 
-<textarea
-name="notes"
-placeholder="Anything we should know?">
-</textarea>
+<br><br>
 
-<button type="submit">
-
-Submit Booking
-
+<button type="submit" class="gold-btn">
+Submit Booking Request
 </button>
 
 </form>
 
+</div>
+
 </section>
 
 <script>
-
-document
-.getElementById("bookingForm")
-.addEventListener("submit", async (e)=>{
+document.getElementById("bookingForm").addEventListener("submit", async (e) => {
 
 e.preventDefault();
 
-const form=new FormData(e.target);
+const form = new FormData(e.target);
 
-const payload=Object.fromEntries(form);
+const payload = Object.fromEntries(form.entries());
 
-const response=await fetch("/api/book",{
-
-method:"POST",
-
-headers:{
+const response = await fetch("/api/book", {
+method: "POST",
+headers: {
 "Content-Type":"application/json"
 },
-
-body:JSON.stringify(payload)
-
+body: JSON.stringify(payload)
 });
 
-const result=await response.json();
+const result = await response.json();
 
-alert("Booking Submitted");
+alert(result.message || "Booking submitted.");
 
 });
-
 </script>
 
 </body>
