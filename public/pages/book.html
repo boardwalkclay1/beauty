@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Book A Session | Meridian</title>
+
+/css/booking.css
+
+</head>
+<body>
+
+<section class="booking-container">
+
+<h1>
+Reserve A Session
+</h1>
+
+<form id="bookingForm">
+
+<input
+type="text"
+name="name"
+placeholder="Full Name"
+required>
+
+<input
+type="email"
+name="email"
+placeholder="Email"
+required>
+
+<input
+type="tel"
+name="phone"
+placeholder="Phone Number"
+required>
+
+<select name="service">
+
+<option>Meridian Reset</option>
+<option>Flowline Ritual</option>
+<option>The Drift</option>
+<option>Combustion Point</option>
+<option>Headwind</option>
+<option>Root Layer</option>
+<option>Pulseline Protocol</option>
+<option>The Compass</option>
+
+</select>
+
+<input type="date" name="date">
+
+<input type="time" name="time">
+
+<textarea
+name="notes"
+placeholder="Anything we should know?">
+</textarea>
+
+<button type="submit">
+
+Submit Booking
+
+</button>
+
+</form>
+
+</section>
+
+<script>
+
+document
+.getElementById("bookingForm")
+.addEventListener("submit", async (e)=>{
+
+e.preventDefault();
+
+const form=new FormData(e.target);
+
+const payload=Object.fromEntries(form);
+
+const response=await fetch("/api/book",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify(payload)
+
+});
+
+const result=await response.json();
+
+alert("Booking Submitted");
+
+});
+
+</script>
+
+</body>
+</html>
